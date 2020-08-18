@@ -1,0 +1,35 @@
+body{
+    height: 800px;
+    background-color: skyblue;
+}
+
+#weatherApp{
+    height: 105px;
+    background-color: black;
+}
+
+#heading{
+    font-size: 70px;
+    color: white;
+}
+
+#search{
+    padding: 20px;
+}
+
+#card1{
+    height: 120px;
+}
+
+#cityname{
+    font-size: xx-large;
+}
+
+#temp{
+    font-size: x-large;
+}
+
+#invalidCity{
+    color: red;
+    font-size: x-large;
+}

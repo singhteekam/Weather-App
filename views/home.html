@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div  id="weatherApp">
+        <center><h1 id="heading"><b><i>Weather App</i></b></h1></center>
+    </div>
+
+    <div id="search">
+        <div class="columns">
+            <div class="column is-offset-4 is-4">
+                <form method="POST" action="/">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" name="cityName" type="text" placeholder="City Name">
+                        </div>
+                        <div class="control">
+                            <button class="button is-info">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <div class="row justify-content-center">
+
+            <div class="card" style="width: 25rem;">
+                <center><img src="http://openweathermap.org/img/w/<%= weather.icon %>.png" width="140px" height="120px"></center>
+                <div class="card-body">
+                  <h1 id="cityname"><b><%= weather.city %></b></h1>
+                  <h1 id="temp"><%= weather.temperature %>° C</h1>
+                  <h5 class="card-title"><%= weather.description %></h5>
+                  
+                  <h5 class="card-title"><b>Feels Like: </b><%= weather.feelsLike %>° C</h5>
+                  <h5 class="card-title"><b>Windspeed:</b> <%= weather.windspeed %> kph</h5>
+                  <h5 class="card-title"><b>Wind Direction:</b> <%= weather.windDirection %>°</h5>
+                  <!-- <h5 class="card-title"><b>Visibility:</b> <%= weather.visibility %> kph</h5> -->
+                  <h5 class="card-title"><b>Humidity:</b> <%= weather.humidity %>%</h5>
+                  <h5 class="card-title"><b>Pressure:</b> <%= weather.pressure %> hPa</h5>
+                  <h5 class="card-title"><b>Sunrise:</b> <%= weather.sunrise %></h5>
+                  <h5 class="card-title"><b>Sunset:</b> <%= weather.sunset %></h5>
+                  <hr>
+                  <h6><i>Last Update: <%= weather.dt %></i></h6>
+                </div>
+              </div>
+        </div>
+    </center>
+</body>
+</html>
