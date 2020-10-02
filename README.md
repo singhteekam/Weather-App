@@ -1,2 +1,2 @@
 # Weather-App
-Current Weather App using node.js
+This is a simple Weather App made using node.js.
