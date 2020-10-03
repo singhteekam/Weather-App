@@ -3,6 +3,19 @@ body{
     background-color: skyblue;
 }
 
+#wapp{
+    height: 105px;
+    background-color: black;
+}
+#xtream{
+
+    color: red;
+
+    font-size: x-large;
+
+}
+
+
 #weatherApp{
     height: 105px;
     background-color: black;
